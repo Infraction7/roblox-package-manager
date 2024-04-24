@@ -1,8 +1,8 @@
-if (Test-Path "./bin") {
-	rojo build -o ./bin/rpm.rbxm
-	copy -Force ./bin/rpm.rbxm $ENV:LOCALAPPDATA\Roblox\Plugins\
+if (Test-Path "./dist") {
+	rojo build -o ./dist/RPM.rbxmx
+	copy -Force ./dist/RPM.rbxmx $ENV:LOCALAPPDATA\Roblox\Plugins\
 } else {
-	mkdir bin
-	rojo build -o ./bin/rpm.rbxm
-	copy -Force ./bin/rpm.rbxm $ENV:LOCALAPPDATA\Roblox\Plugins\
+	mkdir dist
+	rojo build -o ./bin/RPM.rbxmx
+	copy -Force ./bin/RPM.rbxmx $ENV:LOCALAPPDATA\Roblox\Plugins\
 }
